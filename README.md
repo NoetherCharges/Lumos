@@ -1,2 +1,2 @@
 # Lumos!
-Mapping the Milky Wau using 21 cm HI line emission
+Mapping the Milky Way using 21 cm HI line emission
