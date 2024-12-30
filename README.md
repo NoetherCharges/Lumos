@@ -3,7 +3,7 @@ Mapping the Milky Way using 21 cm HI line emission
 
 # Mapping the Milky Way using 21 cm HI line emission
 
-Welcome to the GitHub repository for our **Bachelor’s project** at [IIT Delhi](https://home.iitd.ac.in/). Under the guidance of **Professor Suprit Singh**, this project aims to derive the ***Rotation curve** and **map the spiral arms of the Milky Way Galaxy** using data from galactic neutral hydrogen (HI) emissions conducted over the course of a single semester. This data is obtained using a **pyramidal horn antenna**, tuned to observe 21 cm (1420.4 MHz) emission from interstellar HI clouds concentrated in the spiral arms of the galaxy, and processed to infer spatial and kinematic properties of the Milky Way.
+Welcome to the GitHub repository for our **Bachelor’s project** at [IIT Delhi](https://home.iitd.ac.in/). Under the guidance of [**Professor Suprit Singh**](https://supritsinghlab.github.io/cv/), this project aims to derive the **Rotation curve** and **map the spiral arms of the Milky Way Galaxy** using data from galactic neutral hydrogen (HI) emissions conducted over the course of a single semester. This data is obtained using a **pyramidal horn antenna**, tuned to observe 21 cm (1420.4 MHz) emission from interstellar HI clouds concentrated in the spiral arms of the galaxy, and processed to infer spatial and kinematic properties of the Milky Way.
 
 
 
