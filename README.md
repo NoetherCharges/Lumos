@@ -27,11 +27,13 @@ The pyramidal horn antenna was chosen for this project due to its:
 ### How to Select Dimensions of a Horn Antenna
 The electrodynamics of the pyramidal horn antenna is analyzed using concepts from Antenna Theory by Constantine A. Balanis. For a detailed explanation, including the procedure to optimize the antenna's directivity, refer to the section Design Procedure in the 13th chapter on Horn Antennas. The corresponding Python [code]((./path/to/horn_antenna_design.pdf)) with the iterative algorithm used to determine the aperture lengths is also given.
 
+| ![antenna diagram](images/antennadiagram.jpg) | ![dimensions](images/dimensions.png) |
+|:---:|:---:|
+
 | ![Radiation pattern 1](images/radpattern1.jpg) | ![Radiation pattern 2](images/radpattern2.jpg) |
 |:---:|:---:|
 | 3D representation of Radiation pattern | 2D representation of Radiation pattern and Beam width |
-| ![antenna diagram](images/antennadiagram.jpg) | a = 3 
-b= 4|
+
 
 1. **Operating Frequency (\(f\))**: The frequency of the signal to be observed dictates the wavelength (\(\lambda\)) and, consequently, the dimensions of the antenna.
 2. **Aperture Dimensions (\(a\) and \(b\))**: These control the gain and beamwidth of the antenna. Larger apertures yield higher gain but narrower beamwidth.
