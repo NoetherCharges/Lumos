@@ -14,7 +14,7 @@ The experimental setup involves the following signal flow:
 4. **Computer / Raspberry Pi**: The processed data is transferred to a computer or Raspberry Pi for further analysis and storage. Here, H-line software extracts data from the RTL-SDR, converts it to an SNR vs. frequency curve, and applies smoothing and corrections for linear trends.
 
 ![Experimental setup](images/expsetup.jpg)
-
+Experimental Setup
 
 ## Design of the Horn Antenna
 
@@ -28,6 +28,11 @@ The pyramidal horn antenna was chosen for this project due to its:
 The electrodynamics of the pyramidal horn antenna is analyzed using concepts from Antenna Theory by Constantine A. Balanis. For a detailed explanation, including the procedure to optimize the antenna's directivity, refer to the accompanying theory [pdf]((./path/to/horn_antenna_design.pdf)). The pdf also includes the iterative algorithm used to determine the aperture lengths, along with the corresponding Python [code]((./path/to/horn_antenna_design.pdf)).
 
 add photo of dimensions, horn, radiation pattern
+
+| ![Radiation pattern 1](images/radpattern1.jpg) | ![Radiation pattern 2](images/radpattern2.jpg) |
+|:---:|:---:|
+
+
 
 
 1. **Operating Frequency (\(f\))**: The frequency of the signal to be observed dictates the wavelength (\(\lambda\)) and, consequently, the dimensions of the antenna.
