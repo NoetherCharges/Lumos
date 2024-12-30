@@ -13,7 +13,7 @@ The experimental setup involves the following signal flow:
 3. **Software-Defined Radio (SDR)**: The amplified signal is then fed into a software-defined radio, which digitizes the analog signal for further processing.
 4. **Computer / Raspberry Pi**: The processed data is transferred to a computer or Raspberry Pi for further analysis and storage. Here, H-line software extracts data from the RTL-SDR, converts it to an SNR vs. frequency curve, and applies smoothing and corrections for linear trends.
 
-![Experimental setup](images/expsetup.jpg)
+![Experimental setup](images/expsetup.png)
 Experimental Setup
 
 ## Design of the Horn Antenna
@@ -25,15 +25,12 @@ The pyramidal horn antenna was chosen for this project due to its:
 - **Better Directivity**: Horn antennas provide good directivity, making them ideal for capturing signals from specific sky regions.
 
 ### How to Select Dimensions of a Horn Antenna
-The electrodynamics of the pyramidal horn antenna is analyzed using concepts from Antenna Theory by Constantine A. Balanis. For a detailed explanation, including the procedure to optimize the antenna's directivity, refer to the accompanying theory [pdf]((./path/to/horn_antenna_design.pdf)). The pdf also includes the iterative algorithm used to determine the aperture lengths, along with the corresponding Python [code]((./path/to/horn_antenna_design.pdf)).
-
-add photo of dimensions, horn, radiation pattern
+The electrodynamics of the pyramidal horn antenna is analyzed using concepts from Antenna Theory by Constantine A. Balanis. For a detailed explanation, including the procedure to optimize the antenna's directivity, refer to the section Design Procedure in the 13th chapter on Horn Antennas. The corresponding Python [code]((./path/to/horn_antenna_design.pdf)) with the iterative algorithm used to determine the aperture lengths is also given.
 
 | ![Radiation pattern 1](images/radpattern1.jpg) | ![Radiation pattern 2](images/radpattern2.jpg) |
 |:---:|:---:|
 
 
-images/radiation pattern 1.jpg
 
 1. **Operating Frequency (\(f\))**: The frequency of the signal to be observed dictates the wavelength (\(\lambda\)) and, consequently, the dimensions of the antenna.
 2. **Aperture Dimensions (\(a\) and \(b\))**: These control the gain and beamwidth of the antenna. Larger apertures yield higher gain but narrower beamwidth.
