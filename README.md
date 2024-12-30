@@ -33,7 +33,7 @@ add photo of dimensions, horn, radiation pattern
 |:---:|:---:|
 
 
-
+images/radiation pattern 1.jpg
 
 1. **Operating Frequency (\(f\))**: The frequency of the signal to be observed dictates the wavelength (\(\lambda\)) and, consequently, the dimensions of the antenna.
 2. **Aperture Dimensions (\(a\) and \(b\))**: These control the gain and beamwidth of the antenna. Larger apertures yield higher gain but narrower beamwidth.
