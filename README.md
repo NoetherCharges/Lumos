@@ -13,7 +13,7 @@ The experimental setup involves the following signal flow:
 3. **Software-Defined Radio (SDR)**: The amplified signal is then fed into a software-defined radio, which digitizes the analog signal for further processing.
 4. **Computer / Raspberry Pi**: The processed data is transferred to a computer or Raspberry Pi for further analysis and storage. Here, H-line software extracts data from the RTL-SDR, converts it to an SNR vs. frequency curve, and applies smoothing and corrections for linear trends.
 
-![Experimental setup](images/full setup.jpg)
+![Experimental setup](expsetup.jpg)
 
 
 ## Design of the Horn Antenna
