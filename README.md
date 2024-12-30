@@ -2,7 +2,7 @@
 
 # Mapping the Milky Way using 21 cm HI line emission
 
-Welcome to the GitHub repository for our **Bachelor’s project** at [IIT Delhi](https://home.iitd.ac.in/). Under the guidance of [**Professor Suprit Singh**](https://supritsinghlab.github.io/cv/), this project aims to derive the **Rotation curve** and **map the spiral arms of the Milky Way Galaxy** using data from galactic neutral hydrogen (HI) emissions conducted over the course of a single semester. This data is obtained using a **pyramidal horn antenna**, tuned to observe 21 cm (1420.4 MHz) emission from interstellar HI clouds concentrated in the spiral arms of the galaxy, and processed to infer spatial and kinematic properties of the Milky Way.
+Welcome to the GitHub repository for our **Bachelor’s project** at [IIT Delhi](https://home.iitd.ac.in/). Under the guidance of [Professor Suprit Singh](https://supritsinghlab.github.io/cv/), this project aims to derive the **Rotation curve** and **map the spiral arms of the Milky Way Galaxy** using data from galactic neutral hydrogen (HI) emissions conducted over the course of a single semester. This data is obtained using a **pyramidal horn antenna**, tuned to observe 21 cm (1420.4 MHz) emission from interstellar HI clouds concentrated in the spiral arms of the galaxy, and processed to infer spatial and kinematic properties of the Milky Way.
 
 ## Table of Contents 
 
@@ -11,11 +11,9 @@ The experimental setup involves the following signal flow:
 1. **Horn Antenna**: The process begins with the pyramidal horn antenna, which captures the 21-cm hydrogen line signals emitted from the galactic plane.
 2. **Low-Noise Amplifier (LNA)**: The received signal is directed to a low-noise amplifier equipped with an inbuilt band-pass filter. The LNA amplifies the weak signals and suppresses components outside the allowed band.
 3. **Software-Defined Radio (SDR)**: The amplified signal is then fed into a software-defined radio, which digitizes the analog signal for further processing.
-4. **Computer / Raspberry Pi**: Finally, the processed data is transferred to a computer or Raspberry Pi for further analysis and storage. Here, H-line software is used to extract data from the RTL-SDR, convert it to an SNR vs. frequency curve, and apply smoothing and corrections for linear trends.
+4. **Computer / Raspberry Pi**: The processed data is transferred to a computer or Raspberry Pi for further analysis and storage. Here, H-line software extracts data from the RTL-SDR, converts it to an SNR vs. frequency curve, and applies smoothing and corrections for linear trends.
 
-
-
-![Horn Antenna](horn_antenna.jpg)
+![Experimental setup](images/full setup.jpg)
 
 
 ## Design of the Horn Antenna
@@ -23,8 +21,8 @@ The experimental setup involves the following signal flow:
 ### Why Use a Pyramidal Horn Antenna?
 The pyramidal horn antenna was chosen for this project due to its:
 - **Ease of Construction**: Simple geometry makes it straightforward to design and fabricate.
-- **Cost-Effectiveness**: Requires fewer and inexpensive resources - MDF board, aluminium tape. 
-- **Better Directivity**: Horn antennas provide good directivity, making it ideal for capturing signals from specific regions of the sky.
+- **Cost-Effectiveness**: Requires fewer and inexpensive resources - MDF board, aluminium foil(kitchen foil) and aluminium tape. 
+- **Better Directivity**: Horn antennas provide good directivity, making them ideal for capturing signals from specific sky regions.
 
 ### How to Select Dimensions of a Horn Antenna
 The electrodynamics of the pyramidal horn antenna is analyzed using concepts from Antenna Theory by Constantine A. Balanis. For a detailed explanation, including the procedure to optimize the antenna's directivity, refer to the accompanying theory [pdf]((./path/to/horn_antenna_design.pdf)). The pdf also includes the iterative algorithm used to determine the aperture lengths, along with the corresponding Python [code]((./path/to/horn_antenna_design.pdf)).
