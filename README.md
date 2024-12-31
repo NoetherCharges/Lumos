@@ -2,15 +2,15 @@
 
 # Mapping the Milky Way using 21 cm HI line emission
 
-Welcome to the GitHub repository for our **Bachelor’s project** at [IIT Delhi](https://home.iitd.ac.in/). Under the guidance of [Professor Suprit Singh](https://supritsinghlab.github.io/cv/), this project aims to derive the **Rotation curve** and **map the spiral arms of the Milky Way Galaxy** using data from galactic neutral hydrogen (HI) emissions conducted over the course of a single semester. This data is obtained using a **pyramidal horn antenna**, tuned to observe 21 cm (1420.4 MHz) emission from interstellar HI clouds concentrated in the spiral arms of the galaxy, and processed to infer spatial and kinematic properties of the Milky Way.
+Welcome to the GitHub repository for our **Bachelor’s project** at [IIT Delhi](https://home.iitd.ac.in/). Under the guidance of [Professor Suprit Singh](https://supritsinghlab.github.io/cv/), this project aims to derive the **Rotation curve** and **map the spiral arms of the Milky Way Galaxy** using data from galactic neutral hydrogen (HI) emissions conducted over the course of a single semester. This data is obtained using a **pyramidal horn antenna**, tuned to observe 21 cm (1420.4 MHz) emission from interstellar HI clouds concentrated in the galaxy's spiral arms, and processed to infer spatial and kinematic properties of the Milky Way.
 
 ## Table of Contents 
 
 ## Experimental Setup
 The experimental setup involves the following signal flow:
-1. **Horn Antenna**: The process begins with the pyramidal horn antenna, which captures the 21-cm hydrogen line signals emitted from the galactic plane.
+1. **Horn Antenna**: The process begins with the pyramidal horn antenna, which captures the 21-cm hydrogen line signals emitted from the HI clouds.
 2. **Low-Noise Amplifier (LNA)**: The received signal is directed to a low-noise amplifier equipped with an inbuilt band-pass filter. The LNA amplifies the weak signals and suppresses components outside the allowed band.
-3. **Software-Defined Radio (SDR)**: The amplified signal is then fed into a software-defined radio, which digitizes the analog signal for further processing.
+3. **Software-Defined Radio (SDR)**: The amplified signal is fed into a software-defined radio, which digitizes the analog signal for further processing.
 4. **Computer / Raspberry Pi**: The processed data is transferred to a computer or Raspberry Pi for further analysis and storage. Here, H-line software extracts data from the RTL-SDR, converts it to an SNR vs. frequency curve, and applies smoothing and corrections for linear trends.
 
 ![Experimental setup](images/expsetup.png)
@@ -30,9 +30,16 @@ The electrodynamics of the pyramidal horn antenna is analyzed using concepts fro
 | <img src="images/antennadiagram.jpg" width="500" height="400"> | <img src="images/dimensions.png" width="300"> |
 |:---:|:---:|
 
+Antenna Magus is utilized for simulating the radiation pattern, and the aperture dimensions determined through the iterative method show excellent agreement with the software's results. An 18 dB gain is chosen to ensure that the dimensions of the horn antenna remain manageable (less than 1 meter in total length). Combined with the additional 40 dB gain provided by the LNA, this setup is expected to be sufficient for capturing the weak signals effectively.
+
 | ![Radiation pattern 1](images/radpattern1.jpg) | ![Radiation pattern 2](images/radpattern2.jpg) |
 |:---:|:---:|
 | 3D representation of Radiation pattern | 2D representation of Radiation pattern and Beam width |
+
+[Simulated S-parameters](images/S-parameters.png) for the above-mentioned dimensions of the horn and waveguide.
+
+The [DSPIRA](https://wvurail.org/dspira-lessons/) project is an excellent resource for building the antenna stand ([ours](stand.jpg)) and utilizing GNU Radio as an alternative to H-line software (for amateurs, it is recommended to use the latter).
+
 
 
 1. **Operating Frequency (\(f\))**: The frequency of the signal to be observed dictates the wavelength (\(\lambda\)) and, consequently, the dimensions of the antenna.
