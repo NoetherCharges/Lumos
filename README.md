@@ -25,7 +25,7 @@ The pyramidal horn antenna was chosen for this project due to its:
 - **Better Directivity**: Horn antennas provide good directivity, making them ideal for capturing signals from specific sky regions.
 
 ### How to Select Dimensions of a Horn Antenna
-The electrodynamics of the pyramidal horn antenna is analyzed using concepts from Antenna Theory by Constantine A. Balanis. For a detailed explanation, including the procedure to optimize the antenna's directivity, refer to the section Design Procedure in the 13th chapter on Horn Antennas. The corresponding Python [code]((./path/to/horn_antenna_design.pdf)) with the iterative algorithm used to determine the aperture lengths is also given.
+The [electrodynamics](Theory/Electrodynamics_PyramidalHorn.pdf) of the pyramidal horn antenna is analyzed using concepts from Antenna Theory by Constantine A. Balanis. For a detailed explanation, including the procedure to optimize the antenna's directivity, refer to the section Design Procedure in the 13th chapter on Horn Antennas. The corresponding Python [code]((./path/to/horn_antenna_design.pdf)) with the iterative algorithm used to determine the aperture lengths is also given.
 
 | <img src="images/antennadiagram.jpg" width="500" height="400"> | <img src="images/dimensions.png" width="300"> |
 |:---:|:---:|
@@ -34,33 +34,24 @@ Antenna Magus is utilized for simulating the radiation pattern, and the aperture
 
 | ![Radiation pattern 1](images/radpattern1.jpg) | ![Radiation pattern 2](images/radpattern2.jpg) |
 |:---:|:---:|
-| 3D representation of Radiation pattern | 2D representation of Radiation pattern and Beam width |
+| 3D representation of Radiation pattern | 2D representation of Radiation pattern and Beam width ~ 20&deg;|
 
 [Simulated S-parameters](images/S-parameters.png) for the above-mentioned dimensions of the horn and waveguide.
 
-The [DSPIRA](https://wvurail.org/dspira-lessons/) project is an excellent resource for building the antenna stand ([ours](stand.jpg)) and utilizing GNU Radio as an alternative to H-line software (for amateurs, it is recommended to use the latter).
+The [DSPIRA](https://wvurail.org/dspira-lessons/) project is an excellent resource for building the antenna stand ([ours](images/stand.jpg)) and utilizing GNU Radio as an alternative to H-line software (for amateurs, it is recommended to use the latter).
 
+## Observation Procedure 
 
+### H-line software 
+We used the [H-line software](https://github.com/byggemandboesen/H-line-software/tree/main) by byggemandboesen for extracting data from the RTL-SDR. It also converts it into an SNR vs. frequency curve, and performs tasks such as smoothing and correcting for linear trends.
 
-1. **Operating Frequency (\(f\))**: The frequency of the signal to be observed dictates the wavelength (\(\lambda\)) and, consequently, the dimensions of the antenna.
-2. **Aperture Dimensions (\(a\) and \(b\))**: These control the gain and beamwidth of the antenna. Larger apertures yield higher gain but narrower beamwidth.
-3. **Flare Angles**: The angles of the horn’s walls ensure impedance matching and reduce reflection.
-4. **Waveguide Dimensions**: The dimensions of the waveguide feeding the horn must support the desired mode of operation, typically TE\(_{10}\).
-5. **Empirical Formulas**:
-   - **Aperture width**: \(a = k \lambda\), where \(k\) is a constant based on design specifications.
-   - **Horn length**: Calculated to ensure phase alignment of waves at the aperture for maximum gain.
+The following GIF consists 8 observations across the galactic plane at approximately 10~15 degree intervals.
+![Readingsgif](images/readingsgif.gif)
 
-### How to Access More Details
-For a detailed explanation of the design process and calculations, refer to the PDF document uploaded in this repository:
+### Altitude and Azimuth pointing
+To align the horn antenna with the galactic plane, we utilized the Stellarium Mobile application to identify celestial objects within the galactic plane at regular intervals. Their corresponding Alt/Az coordinates, provided by the application, were used as reference points. The antenna was then oriented using the Satfinder application in AR mode to match these coordinates.
 
-- **[Horn Antenna Design Details](./path/to/horn_antenna_design.pdf)**
-
----
-
-### Note:
-Make sure to replace `./path/to/horn_antenna_design.pdf` with the actual path to your PDF in the repository.
-
-
+Note: Care was taken to minimize interference when using Satfinder, ensuring that the device was kept away from metallic objects (e.g., the waveguide) and the ground. In our setup, the handle at the front of the cradle was used as a reference point for precise alignment, although the horn antenna's beamwidth provides some margin for error in positioning.
 
 ## Acknowledgments
 This project was presented to an audience of over **3,000 high school students**, fostering interest in astronomy and space science. The event received **national media coverage**, showcasing the importance of science outreach.
