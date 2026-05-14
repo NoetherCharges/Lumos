@@ -56,7 +56,7 @@ Note: Care was taken to minimize interference when using Satfinder, ensuring tha
 ## Acknowledgments
 This project was presented to an audience of over **3,000 high school students**, fostering interest in astronomy and space science. The event received **national media coverage**, showcasing the importance of science outreach.
 
-I am deeply grateful to **Professor Suprit Singh** for his invaluable guidance and mentorship. His expertise in cosmology and theoretical astrophysics was instrumental in shaping the project and ensuring its success.
+We are deeply grateful to **Professor Suprit Singh** for his invaluable guidance and mentorship. His expertise in cosmology and theoretical astrophysics was instrumental in shaping the project and ensuring its success.
 
 ---
 
@@ -65,7 +65,6 @@ This repository contains:
 - **Data**: Observational and processed data from the project.
 - **Documentation**: Step-by-step guide to reproduce results and understand the methodology.
 
-Feel free to explore, use, and contribute to this project. Let’s unravel the mysteries of our galaxy together!
 
 ## License
 This project is licensed under [MIT License](LICENSE).
